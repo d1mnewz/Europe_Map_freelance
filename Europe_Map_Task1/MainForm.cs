@@ -16,9 +16,12 @@ namespace Europe_Map_Task1
 
         //list to store each grid
         List<Grid> grids = new List<Grid>();
+        // list to store each label
+        List<Control> Labels = new List<Control>();
         // list to store each pictureBox;
         List<PictureBox> pBoxes = new List<PictureBox>();
         String lastCountry = "";
+        int counter = 0;
         public MainForm()
         {
             InitializeComponent();
@@ -27,11 +30,32 @@ namespace Europe_Map_Task1
        
         private void MainForm_Load(object sender, EventArgs e)
         {
+            InitLabels();
             InitGrids();
             InitCountriesPictures();
+            this.DatesGroupBox.BackColor = Color.Transparent;
+            this.DatesGroupBox.Parent = this.MapBox;
 
         }
-
+        public void InitLabels()
+        {
+            int topMargin = 20;
+            Font f = new Font("Arial", 9);
+            for (int i = 0; i < 8; i++)
+            {
+                Labels.Add(new Label() { Font = f, Visible = false, Top = topMargin, AutoSize = true, Left = 5 });
+                topMargin += 30;
+            }
+            Labels[0].Text = "Італія - 28 жовтня 1921 року";
+            Labels[1].Text = "Болгарія - 9 вересня 1923 року";
+            Labels[2].Text = "Португалія - 1926 рік";
+            Labels[3].Text = "Угорщина - вересень 1932 року";
+            Labels[4].Text = "Німеччина - 28 лютого 1933 року";
+            Labels[5].Text = "Румунія - 1934 рік";
+            Labels[6].Text = "Югославія - лютий 1939 року";
+            Labels[7].Text = "Іспанія - кінець березня 1939 року";
+            this.DatesGroupBox.Controls.AddRange(Labels.ToArray());
+        }
         private void Item_Click(object sender, EventArgs e)
         {
             AdditionalForm adF = new AdditionalForm(lastCountry);
@@ -43,7 +67,7 @@ namespace Europe_Map_Task1
         private void MapBox_MouseMove(object sender, MouseEventArgs e)
         {
             
-            Point mouse = new Point(e.X, e.Y);
+            Point mouse = new Point(e.X, e.Y); // current position
             Grid current = grids.Find(delegate (Grid g)
             { return g.Rectangle.Contains(mouse) == true; });
             PictureBox p = new PictureBox();
@@ -93,12 +117,8 @@ namespace Europe_Map_Task1
                         pBoxes[7].Enabled = true;
                         pBoxes[7].Visible = true;
                         break;
-                } 
+                }
             }
-            
-            
-            
-
         }
         private void InitGrids()
         {
@@ -180,7 +200,7 @@ namespace Europe_Map_Task1
             {
                 item.Enabled = false;
                 item.Visible = false;
-                item.Parent = MapBox;
+                item.Parent = this.MapBox;
                 item.BackColor = Color.Transparent;
                 item.SizeMode = PictureBoxSizeMode.StretchImage;
                 item.Click += Item_Click;
@@ -237,7 +257,7 @@ namespace Europe_Map_Task1
             sp.Size = new Size(current.Rectangle.Width + 60, current.Rectangle.Height + 70);
             pBoxes.Add(sp);
         }
-        private void InitYugoslavia()
+        private void InitYugoslavia()// OK
         {
 
             Grid current = grids.First(x => x.GridName == "Yugoslavia");
@@ -247,7 +267,7 @@ namespace Europe_Map_Task1
             sp.Size = new Size(current.Rectangle.Width + 35, current.Rectangle.Height + 40);
             pBoxes.Add(sp);
         }
-        private void InitItaly()
+        private void InitItaly()// OK
         {
             // to add a little area in bottom left
             Grid current = grids.First(x => x.GridName == "Italy");
@@ -257,7 +277,7 @@ namespace Europe_Map_Task1
             sp.Size = new Size(current.Rectangle.Width + 35, current.Rectangle.Height + 65);
             pBoxes.Add(sp);
         }
-        private void InitPortugal()
+        private void InitPortugal()// OK
         {
             Grid current = grids.First(x => x.GridName == "Portugal");
             PictureBox sp = new PictureBox();
@@ -267,11 +287,62 @@ namespace Europe_Map_Task1
             pBoxes.Add(sp);
         }
 
+        private void StartLabelsButton_Click(object sender, EventArgs e)
+        {
+            this.timer1.Interval = 2000;
+            this.timer1.Start();
+            this.StartLabelsButton.Enabled = false;
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.Labels[counter].ForeColor = Color.Black;
+
+            this.Labels[counter].Visible = true;
+
+            switch (counter)
+            {
+                case 0:
+                    this.MapBox.Image = Properties.Resources.first_italy;
+                    break;
+                case 1:
+                    this.MapBox.Image = Properties.Resources.second_bulgary;
+                    break;
+                case 2:
+                    this.MapBox.Image = Properties.Resources.third_portugal;
+                    break;
+                case 3:
+                    this.MapBox.Image = Properties.Resources.fourth_hungary;
+                    break;
+                case 4:
+                    this.MapBox.Image = Properties.Resources.fifth_germany;
+                    break;
+                case 5:
+                    this.MapBox.Image = Properties.Resources.sixth_romania;
+                    break;
+                case 6:
+                    this.MapBox.Image = Properties.Resources.seventh_yugoslavia;
+                    break;
+                case 7:
+                    this.MapBox.Image = Properties.Resources.eighth_spain;
+                    break;
+            }
+
+            this.MapBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            this.MapBox.Refresh();
+
+            counter++;
+            if (counter == 8)
+            {
+                timer1.Stop();
+            }
+        }
     }
-    class Grid
+    internal class Grid
     {
         public Rectangle Rectangle { get; set; }
-        public string GridName { get; set; }
+        public string GridName { get; set; } // country name
         public Grid(Point location, Size size, string name)
         {
             GridName = name;

@@ -145,4 +145,28 @@
   <data name="yugoslavia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yugoslavia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="eighth_spain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eighth_spain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fifth_germany" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fifth_germany.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="first_italy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\first_italy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fourth_hungary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fourth_hungary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="second_bulgary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\second_bulgary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="seventh_yugoslavia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\seventh_yugoslavia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sixth_romania" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sixth_romania.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="third_portugal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\third_portugal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

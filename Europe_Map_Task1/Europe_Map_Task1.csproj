@@ -60,7 +60,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -121,6 +121,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\yugoslavia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eighth_spain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fifth_germany.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_italy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fourth_hungary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\second_bulgary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seventh_yugoslavia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sixth_romania.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\third_portugal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
