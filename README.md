@@ -5,6 +5,7 @@ my profile - https://freelancehunt.com/freelancer/d1mnewz.html
 
 this project - https://freelancehunt.com/project/visual-studio-windows-form/182964.html
 
+Firstly i want to say that the way project looks is all about customer, that was his wish for this project to look like that.
 
 Technical task:
 Назва проекту: Зародження фашизму в Європі. Завдання як таких два (Visual
