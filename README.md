@@ -23,6 +23,12 @@ Studio Windows Form C#).
  Коли наводиш на любу з перелічених вище країн вона підсвічується і можна
 перейти на іншу форму.
 
+
+My realization seemed like this:
+giffingTool cant capture mouse %(
+but at the end i simply clicked on spain.
+<img src = "http://savepic.ru/12580568.gif"/>
+
 2. Вихідна та сама карта, по кнопці за таймером темніють або міняють колір
 на темний країни, висвічується назва країни та дата  в наступній
 послідовності:
@@ -35,3 +41,7 @@ Studio Windows Form C#).
 Югославія - лютий 1939 року
 Іспанія - кінець березня 1939 року
 Коли країна погасла вона і залишається темною.
+
+My realization seemed like this:
+
+<img src = "http://savepic.ru/12549848.gif"/>
